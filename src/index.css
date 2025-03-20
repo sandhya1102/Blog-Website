@@ -1,0 +1,233 @@
+@import "tailwindcss";
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    font-family: "kanit";
+}
+
+html{
+    font-size:62.5%;
+}
+
+.header{
+    padding: 12px 4px 6px 10px;
+    font-family: 'bebas';
+    letter-spacing: 7px;
+}
+
+.searchbar{
+    margin: 4px;
+    padding: 12px;
+}
+
+.searchbar input{
+    padding: 8px;
+}
+
+.sidebar{
+    margin: 12px;
+}
+
+.catog{
+    padding-top: 2px;
+}
+.links{
+    margin-top: 20px;
+}
+.links a{
+    padding: 3px;
+}
+.links a i{
+    margin-left: 5px;
+}
+
+.news,.blogs,.weather{
+    margin-top: 12px;
+}
+
+.news-grid{
+    padding: 5px;
+}
+
+.news-grid img{
+    border-radius: 1.2rem;
+}
+
+.news::-webkit-scrollbar{
+    display: none;
+}
+.bookmarks-content::-webkit-scrollbar{
+    display: none;
+}
+
+.headline h2{
+    padding: 1rem;
+}
+
+.content{
+    padding: 10px;
+}
+.content a{
+    padding:5px;
+}
+.content h4{
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+.bookmark-title{
+    padding: 9px;
+}
+.bookmarks-content {
+    padding: 5px;
+    margin-top: 10px;
+}
+.list{
+    margin: 10px;
+}
+.weather-content{
+    margin-top: 20px;
+}
+.w-data{
+    margin-top: 10px;
+}
+.search input{
+    padding:12px 1px 15px 1px;
+}
+.month i{
+    padding: 4px;
+}
+.days {
+    margin-top:  60px;
+}
+.blog-form h1{
+    margin-bottom: 30px;
+}
+.blog-form input[type="text"]{
+    padding-bottom:20px
+}
+.footer span{
+    margin: 15px;
+}
+.posts{
+    background:url(../src/assets/images/post.jpg) center no-repeat ;
+    background-size: cover;
+}
+.blogs-post{
+    margin-top: 50px;
+    padding: 0px 10px 0px 10px;
+}
+.blogs::-webkit-scrollbar{
+    display: none;
+}
+.single-post:hover .btns{
+    opacity:1;
+    visibility: visible;
+}
+.single-post h2{
+    padding: 3px;
+}
+.blogs hr{
+    margin: auto;
+}
+.blog-form button{
+    padding: 10px;
+}
+.blogs-model::-webkit-scrollbar{
+    display: none;
+}
+.news-model::-webkit-scrollbar{
+    display: none;
+}
+.blogs-model span i{
+    padding: 4px;
+}
+#create-btn{
+    padding: 10px 20px;
+}
+
+  /* Large Screens (1441px - 1920px) */
+  @media (max-width: 1920px) {
+    body {
+      font-size: 17px;
+    }
+  }
+  
+  /* Laptops (1025px - 1440px) */
+  @media (max-width: 1440px) {
+    body {
+      font-size: 18px;
+    }
+    
+  }
+  
+  /* Tablets (768px - 1024px) */
+  @media (max-width: 1024px) {
+    body {
+      font-size: 15px;
+    }
+    .footer{
+        margin-top: 30px;
+    }
+    .single-post{
+        padding: 20px;
+    }
+    .news{
+        padding: 20px;
+    }
+    .calender,.weather{
+        padding: 10px;
+        margin: 10px;
+    }
+    .dashboard{
+        width: 100vw;
+        max-width: 100vw;
+
+       }
+       .dashboard-container{
+        width:100vw;
+       }
+  }
+  
+  /* Large Mobile Devices (481px - 767px) */
+  @media (max-width: 767px) {
+    body {
+      font-size: 14px;
+    }
+    .footer{
+        margin-top: 20px;
+        padding: 20px;
+       }
+       .dashboard{
+        width: 100vw;
+        max-width: 100vw;
+
+       }
+       .dashboard-container{
+        width:100vw;
+       }
+       .blogs-post{
+        grid-template-columns: repeat(2,1fr);
+       }
+  }
+  
+  /* Small Mobile Devices (320px - 480px) */
+  @media (max-width: 480px) {
+    body {
+      font-size: 13px;
+    }
+    .dashboard{
+        width: 100vw;
+        max-width: 100vw;
+
+       }
+       .dashboard-container{
+        width:100vw;
+       }
+  }
+  
+
