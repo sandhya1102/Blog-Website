@@ -4,10 +4,10 @@ import techImg from "../assets/images/tech.jpg";
 const Newsmodel = ({ show, article, onclose }) => {
   if (!show || !article) return null;
   return (
-    <div className="fixed inset-0 bg-black/75 flex justify-center items-center z-1000">
-      <div className="bg-zinc-900 rounded-2xl lg:w-[28%]  w-[50%] h-[80%] relative shadow-[0_0_5rem_4rem_rgba(0,0,0,1.5)]">
+    <div className="fixed inset-0 bg-black/40 flex justify-center items-center z-1000 ">
+      <div className="bg-white rounded-2xl lg:w-[28%] w-[50%] relative shadow-[0_0_5rem_4rem_rgba(0,0,0,0.3)] h-auto">
         <span
-          className="absolute right-1 -top-8 cursor-pointer"
+          className="absolute right-1 -top-10 cursor-pointer text-white"
           onClick={onclose}
         >
           <i className="fa-solid fa-xmark text-3xl"></i>
@@ -23,10 +23,10 @@ const Newsmodel = ({ show, article, onclose }) => {
             <p className="text-xl font-medium">
               Source: {article.source?.name || "Unknown"}
             </p>
-            <p className="font-sans text-lg text-gray-400 ">
+            <p className="font-sans text-lg text-gray-800 ">
               {article.publishedAt?.split("T")[0]}
             </p>
-            <h4 className="text-[1.4rem] text-gray-200">
+            <h4 className="text-[1.4rem] text-gray-900">
               {article.description.slice(0, 500)}
             </h4>
             <a

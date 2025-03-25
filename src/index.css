@@ -19,6 +19,9 @@ html{
     font-family: 'bebas';
     letter-spacing: 7px;
 }
+.navbar{
+    padding: 40px;
+}
 
 .searchbar{
     margin: 4px;
@@ -28,16 +31,19 @@ html{
 .searchbar input{
     padding: 8px;
 }
+.post-profile{
+    margin: 1px;
+    padding: 10px;
+}
+.post-profile button{
+    padding:30px;
+}
 
 .sidebar{
-    margin: 12px;
-}
-
-.catog{
-    padding-top: 2px;
+    margin: 2px;
 }
 .links{
-    margin-top: 20px;
+    margin: 17px;
 }
 .links a{
     padding: 3px;
@@ -46,16 +52,15 @@ html{
     margin-left: 5px;
 }
 
-.news,.blogs,.weather{
-    margin-top: 12px;
+.news,.blogs{
+    margin-top: 10px;
+}
+.news{
+    margin-left: 50px;
 }
 
 .news-grid{
     padding: 5px;
-}
-
-.news-grid img{
-    border-radius: 1.2rem;
 }
 
 .news::-webkit-scrollbar{
@@ -89,20 +94,16 @@ html{
 .list{
     margin: 10px;
 }
-.weather-content{
-    margin-top: 20px;
+.weather{
+    margin: 20px;
+    padding: 40px;
 }
+
 .w-data{
     margin-top: 10px;
 }
 .search input{
     padding:12px 1px 15px 1px;
-}
-.month i{
-    padding: 4px;
-}
-.days {
-    margin-top:  60px;
 }
 .blog-form h1{
     margin-bottom: 30px;
@@ -110,18 +111,22 @@ html{
 .blog-form input[type="text"]{
     padding-bottom:20px
 }
-.footer span{
-    margin: 15px;
-}
 .posts{
     background:url(../src/assets/images/post.jpg) center no-repeat ;
     background-size: cover;
 }
-.blogs-post{
+.weather{
     margin-top: 50px;
+}
+.weather{
+    background: url(../src/assets/images/weatherbg.jpg)  no-repeat;
+    background-size: cover;
+}
+.blogs-post{
+    margin-top: 20px;
     padding: 0px 10px 0px 10px;
 }
-.blogs::-webkit-scrollbar{
+.blogs-post::-webkit-scrollbar{
     display: none;
 }
 .single-post:hover .btns{
@@ -134,9 +139,13 @@ html{
 .blogs hr{
     margin: auto;
 }
+.blog-title{
+    padding: 10px;
+}
 .blog-form button{
     padding: 10px;
 }
+
 .blogs-model::-webkit-scrollbar{
     display: none;
 }
@@ -149,12 +158,22 @@ html{
 #create-btn{
     padding: 10px 20px;
 }
+.footer{
+    padding: 50px;
+}
+.footer span{
+    margin: 15px;
+}
 
   /* Large Screens (1441px - 1920px) */
   @media (max-width: 1920px) {
     body {
       font-size: 17px;
     }
+    .news-text h2{
+        padding: 10px;
+    }
+   
   }
   
   /* Laptops (1025px - 1440px) */
@@ -170,49 +189,78 @@ html{
     body {
       font-size: 15px;
     }
-    .footer{
-        margin-top: 30px;
-    }
-    .single-post{
-        padding: 20px;
-    }
-    .news{
-        padding: 20px;
-    }
-    .calender,.weather{
+    .headline{
         padding: 10px;
-        margin: 10px;
     }
-    .dashboard{
-        width: 100vw;
-        max-width: 100vw;
+   
 
-       }
-       .dashboard-container{
-        width:100vw;
-       }
-  }
+    
+}
   
   /* Large Mobile Devices (481px - 767px) */
   @media (max-width: 767px) {
     body {
       font-size: 14px;
     }
+    .navbar{
+        width:1000px;
+        height: 100px;
+    }
+    .header{
+        font-size: 3.9rem;
+    }
+    .searchbar{
+        width: 150px;
+        font-size: 2rem;
+    }
+    .post-profile button{
+        font-size: 2.3rem;
+    }
+    .sidebar{
+        display: none;
+    }
+   .menu{
+    padding: 10px;
+   }
+   .menu a{
+    padding: 5px;
+   }
+    .blogs{
+        margin-left: 50px;
+        width: 100%;
+        height: 50%;
+    }
+    .weather{
+        margin-left: 50px; 
+  
+    } 
+    .blogs-post{
+        width: 400px;
+        height: 30%;
+    }
+    .blog-title{
+        width: 20px;
+    }
+    .no-post{
+        margin: 5px;
+    }
     .footer{
-        margin-top: 20px;
-        padding: 20px;
-       }
-       .dashboard{
-        width: 100vw;
-        max-width: 100vw;
+        width: 1000px;
 
-       }
-       .dashboard-container{
-        width:100vw;
-       }
-       .blogs-post{
-        grid-template-columns: repeat(2,1fr);
-       }
+    }
+    .w-BContain{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 100px;
+    }
+    .weather{
+        width: 100%;
+        height: 70%;
+    }
+   .weather-content{
+    padding: 50px;
+   }
   }
   
   /* Small Mobile Devices (320px - 480px) */
@@ -220,14 +268,45 @@ html{
     body {
       font-size: 13px;
     }
-    .dashboard{
-        width: 100vw;
-        max-width: 100vw;
-
-       }
-       .dashboard-container{
-        width:100vw;
-       }
+    .w-BContain{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .blogs{
+        margin: auto;
+        margin-left: 250px;
+    }
+    .single-post{
+        margin-top: 20px;
+        margin: auto;
+    }
+    .single-post img{
+        width: 100%;
+    }
+   .weather{
+    margin: auto;
+    margin-left: 50%;
+   }
+   .weather-content{
+    margin: auto;
+   }
+   
+  }
+  
+  @media (max-width: 320px) {
+    body {
+      font-size: 13px;
+    }
+   .weather{
+    margin: auto;
+    margin-left: 80%;
+   }
+   .weather-content{
+    margin: auto;
+    padding: 30px;
+   }
+   
   }
   
 

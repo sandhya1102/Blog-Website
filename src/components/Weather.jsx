@@ -19,22 +19,22 @@ const Weather = () => {
   const getWeatherIcon = (weatherType) => {
     switch (weatherType) {
       case "Clear":
-        return <i className="fa-regular fa-sun text-yellow-400 text-[6rem]"></i>;
+        return <i className="fa-regular fa-sun text-yellow-400 text-[7rem]"></i>;
       case "Clouds":
-        return <i className="fa-solid fa-cloud text-[6rem] text-gray-400"></i>;
+        return <i className="fa-solid fa-cloud text-[6rem] text-blue-800"></i>;
       case "Rain":
         return (
-          <i className="fa-solid fa-cloud-showers-heavy text-blue-400 text-[6rem]"></i>
+          <i className="fa-solid fa-cloud-showers-heavy text-blue-100 text-[7rem]"></i>
         );
       case "Thunderstorm":
-        return <i className="fa-solid fa-bolt text-yellow-500 text-[6rem]"></i>;
+        return <i className="fa-solid fa-bolt text-yellow-500 text-[7rem]"></i>;
       case "Snow":
-        return <i className="fa-solid fa-snowflake text-blue-300 text-[6rem]"></i>;
+        return <i className="fa-solid fa-snowflake text-blue-100 text-[7rem]"></i>;
       case "Haze":
       case "Mist":
-        return <i className="fa-solid fa-smog text-gray-400 text-[6rem]"></i>;
+        return <i className="fa-solid fa-smog text-gray-100 text-[7rem]"></i>;
       default:
-        return <i className="fa-solid fa-cloud text-gray-400 text-[6rem]"></i>;
+        return <i className="fa-solid fa-cloud text-gray-100 text-[7rem]"></i>;
     }
   };
 
@@ -63,11 +63,11 @@ const Weather = () => {
   }, [city]);
 
   return (
-    <div className="weather 2xl:w-[280px]  xl:h-[250px] lg:h-[240px] lg:w-[230px] h-auto w-[50%] bg-zinc-900 rounded-xl flex justify-center content-center ">
-      <div className="weather-content flex flex-col gap-9 w-[200px] h-auto">
+    <div className="weather max-w-full  rounded-xl flex justify-center items-center  ">
+      <div className="weather-content flex flex-col gap-9 lg:w-[250px] w-full h-auto ">
         <div className="location flex gap-7 items-center">
-          <i className="fa-solid fa-location-dot text-[2rem] text-gray-100"></i>
-          <p className="text-[2rem] font-bold text-gray-100">{weather?.name || "City"}</p>
+          <i className="fa-solid fa-location-dot text-[2rem] text-gray-800"></i>
+          <p className="text-[3rem] font-bold text-gray-800">{weather?.name || "City"}</p>
         </div>
         <div className="search gap-8 flex content-center items-center">
           <input
@@ -78,16 +78,16 @@ const Weather = () => {
             onChange={handleInputChange}
           />
           <button onClick={handleSearch}>
-            <i className="fa-solid fa-magnifying-glass text-2xl text-gray-400 "></i>
+            <i className="fa-solid fa-magnifying-glass text-2xl text-gray-900 "></i>
           </button>
         </div>
         <div className="w-data flex flex-col justify-center content-center items-center gap-1 xl:gap-3">
           {weather?.weather?.[0]?.main &&
             getWeatherIcon(weather.weather[0].main)}
-          <div className="text-[2rem]">
+          <div className="text-[2rem] text-white">
             {weather?.weather?.[0]?.main || "N/A"}
           </div>
-          <div className="text-2xl">
+          <div className="text-[2rem] text-white">
             {weather?.main?.temp ? `${Math.floor(weather.main.temp)}°C` : "N/A"}
           </div>
         </div>

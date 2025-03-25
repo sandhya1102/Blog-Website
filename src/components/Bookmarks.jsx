@@ -11,8 +11,8 @@ const Bookmarks = ({
   if (!show) return null;
 
   return (
-    <div className="fixed inset-0 bg-black/75 flex justify-center items-center z-1000">
-      <div className="bg-zinc-900 rounded-2xl w-[28%] h-auto relative shadow-[0_0_5rem_4rem_rgba(0,0,0,1.5)] p-4">
+    <div className="fixed inset-0 bg-black/60 flex justify-center items-center z-1000">
+      <div className="bg-blue-50 rounded-2xl w-[28%] h-auto relative shadow-[0_0_5rem_4rem_rgba(0,0,0,0.5)] p-4">
         <span
           className="absolute right-3 top-3 cursor-pointer"
           onClick={onclose}
@@ -24,7 +24,7 @@ const Bookmarks = ({
         </h1>
         <div className="bookmarks-content max-h-[300px] overflow-y-auto ">
           {bookmarks.length === 0 ? (
-            <p className="text-center text-gray-400">No bookmarks yet.</p>
+            <p className="text-center text-gray-700">No bookmarks yet.</p>
           ) : (
             bookmarks.map((article, index) => (
               <div

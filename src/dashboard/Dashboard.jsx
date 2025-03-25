@@ -1,9 +1,8 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext} from "react";
 import Navbar from "../components/Navbar";
 import Sidebar from "../components/Sidebar";
 import News from "../components/News";
 import Weather from "../components/Weather";
-import Calender from "../components/Calender";
 import Footer from "../components/Footer";
 import Blogs from "../components/Blogs";
 import Newsmodel from "../Model/Newsmodel";
@@ -32,13 +31,12 @@ const Dashboard = ({
 
   return (
     <>
-      <div className="dashboard w-full min-h-screen bg-gradient-to-r from-purple-500 to-blue-500 grid items-center place-content-center">
-        <div className="dashboard-container w-[95vw] xl:w-[95vw] lg:w-[95vw] min-h-[95vh] xl:h-[95vh] bg-zinc-950 shadow-2xl shadow-zinc-700 text-white">
+        <div className= "max-h-full bg-gradient-to-r from-sky-200 to-white ">
           <Navbar />
-          <div className="flex lg:flex-row flex-col lg:h-[calc(100%_-_9rem)]">
+          <div className="">
             <Sidebar onshowBlogs={onshowBlogs} />
             <div className="flex flex-col lg:flex-row gap-5 ">
-              <News />
+              <News   article={selectedArticle}/>
               <Newsmodel
                 show={showModel}
                 article={selectedArticle}
@@ -55,6 +53,8 @@ const Dashboard = ({
                   );
                 }}
               />
+             
+              <div className="w-BContain ">
               <Blogs onEditBlog={onEditBlog} onDeleteBlog={onDeleteBlog} />
               {selectedPost && showBlogModel && (
                 <BlogsModel
@@ -63,15 +63,13 @@ const Dashboard = ({
                   onclose={() => setshowblogModel(false)}
                 />
               )}
-              <div className="flex lg:flex-col gap-5 ">
-                <Weather />
-                <Calender />
-              </div>
+              <Weather />
+             
+               </div>
             </div>
           </div>
           <Footer />
         </div>
-      </div>
     </>
   );
 };
