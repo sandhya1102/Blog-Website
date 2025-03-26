@@ -15,7 +15,7 @@ const Blogs = ({ onEditBlog, onDeleteBlog }) => {
         BLOGS
       </h1>
       <hr className="w-48 border-t-2 border-blue-600 mx-auto mb-4" />
-
+<div className="blogs-container ">
       {blogs.length === 0 ? (
         <div className="no-post flex flex-col items-center justify-center text-center text-white h-[100%]">
           <h2 className="text-2xl font-semibold text-black">No Blogs Yet! 🚀</h2>
@@ -24,7 +24,7 @@ const Blogs = ({ onEditBlog, onDeleteBlog }) => {
           </p>
         </div>
       ) : (
-        <div className="blogs-post w-full grid xl:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 h-[500px] overflow-auto gap-4 ">
+        <div className="blogs-post w-full grid xl:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 overflow-auto gap-4 ">
           {blogs.map((blog, index) => (
             <div
               onClick={() => handleBlogClick(blog)}
@@ -56,6 +56,7 @@ const Blogs = ({ onEditBlog, onDeleteBlog }) => {
           ))}
         </div>
       )}
+      </div>
     </div>
   );
 };

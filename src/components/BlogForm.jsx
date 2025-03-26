@@ -65,10 +65,9 @@ const BlogForm = ({ onback, editPost, isEditing }) => {
 
   return (
     <div className=" w-full h-screen bg-gradient-to-r from-purple-100 to-blue-300 flex items-center justify-center">
-      <div className="w-[95vw] h-[95vmin] bg-zinc-950 shadow-2xl shadow-zinc-700 text-white flex relative rounded-lg p-8">
+      <div className="blog-form w-[90vw] h-[80vh] md:w-[95vw] md:h-[95vh] lg:w-[95vw] lg:h-[95vmin] bg-zinc-950 shadow-2xl shadow-zinc-700 text-white flex relative rounded-lg p-8">
         <div className="posts w-[50%] h-[100%] lg:flex hidden relative">
         </div>
-
         <div className="blog-form w-full lg:w-1/2 flex flex-col gap-[4rem] relative items-center h-[60%]">
           {!showForm ? (
             <div className="w-full flex justify-center items-center absolute top-[65%] bottom-0">
@@ -88,7 +87,7 @@ const BlogForm = ({ onback, editPost, isEditing }) => {
 
               <form
                 onSubmit={handleSubmit}
-                className="flex 2xl:justify-center flex-col gap-[7rem] w-full max-w-[400px] 2xl:gap-[12rem]"
+                className="flex 2xl:justify-center flex-col gap-22 lg:gap-[7rem] md:gap-[9rem] w-full max-w-[400px] 2xl:gap-[12rem]"
               >
                 <label
                   htmlFor="file-upload"
@@ -132,7 +131,7 @@ const BlogForm = ({ onback, editPost, isEditing }) => {
         </div>
         <button
           onClick={onback}
-          className="absolute top-9 right-16 text-3xl font-medium tracking-tight hover:scale-105 transition"
+          className="absolute top-0 right-0 lg:top-9 lg:right-16 text-3xl font-medium tracking-tight hover:scale-105 transition"
         >
           Back <i className="fa-solid fa-backward"></i>
         </button>

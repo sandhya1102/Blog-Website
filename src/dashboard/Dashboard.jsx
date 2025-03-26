@@ -54,7 +54,7 @@ const Dashboard = ({
                 }}
               />
              
-              <div className="w-BContain ">
+              <div className="w-BContain">
               <Blogs onEditBlog={onEditBlog} onDeleteBlog={onDeleteBlog} />
               {selectedPost && showBlogModel && (
                 <BlogsModel

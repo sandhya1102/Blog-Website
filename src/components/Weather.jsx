@@ -69,9 +69,9 @@ const Weather = () => {
           <i className="fa-solid fa-location-dot text-[2rem] text-gray-800"></i>
           <p className="text-[3rem] font-bold text-gray-800">{weather?.name || "City"}</p>
         </div>
-        <div className="search gap-8 flex content-center items-center">
+        <div className="search lg:gap-8 gap-20 flex content-center items-center">
           <input
-            className="text-[1.4rem] border-b-[1px] border-zinc-600 w-full h-9"
+            className="text-[1.7rem] lg:text-[1.9rem] border-b-[1px] border-zinc-600 w-full h-9"
             type="text"
             placeholder="Enter location"
             value={inputValue}

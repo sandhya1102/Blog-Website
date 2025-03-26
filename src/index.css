@@ -231,10 +231,12 @@ html{
         height: 50%;
     }
     .weather{
-        margin-left: 50px; 
-  
+        margin-left: 60%;
+        margin: auto;
     } 
     .blogs-post{
+        display: flex;
+        flex-direction: row;
         width: 400px;
         height: 30%;
     }
@@ -251,15 +253,9 @@ html{
     .w-BContain{
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
-        gap: 100px;
-    }
-    .weather{
-        width: 100%;
-        height: 70%;
     }
    .weather-content{
-    padding: 50px;
+    padding: 10px 220px 20px 190px;
    }
   }
   
@@ -290,6 +286,7 @@ html{
    }
    .weather-content{
     margin: auto;
+    padding: 40px 150px 40px 150px;
    }
    
   }
@@ -300,13 +297,14 @@ html{
     }
    .weather{
     margin: auto;
-    margin-left: 80%;
+    margin-left: 90%;
    }
    .weather-content{
-    margin: auto;
-    padding: 30px;
+    padding: 40px 100px 40px 100px;
    }
-   
+   .blog-form{
+    padding: 10px;
+   }
   }
   
 
